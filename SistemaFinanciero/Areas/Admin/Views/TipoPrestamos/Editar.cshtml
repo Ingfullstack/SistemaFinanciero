@@ -1,0 +1,61 @@
+﻿@model TipoPrestamo
+
+@{
+    ViewData["Title"] = "Actualizar Tipo Prestamo";
+}
+
+<div class="container-xl">
+    <div class="row justify-content-center my-5">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header bg-success bg-gradient text-white p-4">
+                    <h3 class="text-center">Actualizar Tipo Prestamo</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <input asp-for="Id" hidden />
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Nombre" type="text" class="form-control" placeholder="Nombre cliente">
+                            <label asp-for="Nombre"></label>
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="TasaInteresAnual" type="number" class="form-control" placeholder="% 0.00">
+                            <label asp-for="TasaInteresAnual"></label>
+                            <span asp-validation-for="TasaInteresAnual" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="PlazoMaximoMeses" type="number" class="form-control" placeholder="Plazo Maximo">
+                            <label asp-for="PlazoMaximoMeses"></label>
+                            <span asp-validation-for="PlazoMaximoMeses" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="MontoMaximo" type="number" class="form-control" placeholder="Monto Maximo">
+                            <label asp-for="MontoMaximo"></label>
+                            <span asp-validation-for="MontoMaximo" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="PorcentajeRefinanciamiento" type="number" class="form-control" placeholder="% 0.00">
+                            <label asp-for="PorcentajeRefinanciamiento"></label>
+                            <span asp-validation-for="PorcentajeRefinanciamiento" class="text-danger"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-success w-100"> <i class="bi bi-plus-circle"></i> Guardar Cambios</button>
+                            </div>
+                            <div class="col-6">
+                                <a asp-action="Index" class="btn btn-secondary w-100"> <i class="bi bi-arrow-left-circle"></i> Cancelar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+

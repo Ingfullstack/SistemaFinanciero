@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Lista prestamo";
+}
+
+<div class="container-xl">
+    <h1 class="mt-5">Lista Tipo Prestamos</h1>
+
+    <div class="text-md-end mb-4">
+        <a asp-area="Admin" asp-controller="Prestamos" asp-action="Crear" class="btn btn-success bg-gradient"> <i class="bi bi-plus-circle"></i> Nuevo Prestamo</a>
+    </div>
+
+    <div class="table-responsive shadow p-3">
+        <table id="tblDatos" class="table table-striped table-hover w-100">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Tipo Prestamo</th>
+                    <th>Monto Prestado</th>
+                    <th>Plazo Meses</th>
+                    <th>Interes Compuesto</th>
+                    <th class="text-center">Acciones</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/prestamo.js"></script>
+}
+

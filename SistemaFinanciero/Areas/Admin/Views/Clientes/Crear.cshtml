@@ -1,0 +1,60 @@
+﻿@model Cliente
+
+@{
+    ViewData["Title"] = "Crear Cliente";
+}
+
+<div class="container-xl">
+    <div class="row justify-content-center my-5">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header bg-success bg-gradient text-white p-4">
+                    <h3 class="text-center">Crear Cliente</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Nombre" type="text" class="form-control" placeholder="Nombre cliente">
+                            <label asp-for="Nombre"></label>
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Apellido" type="text" class="form-control" placeholder="Apellido cliente">
+                            <label asp-for="Apellido"></label>
+                            <span asp-validation-for="Apellido" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Telefono" type="text" class="form-control" placeholder="Telefono cliente">
+                            <label asp-for="Telefono"></label>
+                            <span asp-validation-for="Telefono" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Email" type="email" class="form-control" placeholder="ejemplo@correo.com">
+                            <label asp-for="Email"></label>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Cedula" type="text" class="form-control" placeholder="Cedula cliente">
+                            <label asp-for="Cedula"></label>
+                            <span asp-validation-for="Cedula" class="text-danger"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-success w-100"> <i class="bi bi-plus-circle"></i> Guardar</button>
+                            </div>
+                            <div class="col-6">
+                                <a asp-action="Index" class="btn btn-secondary w-100"> <i class="bi bi-arrow-left-circle"></i> Cancelar</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+
